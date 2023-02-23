@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="avis.component.css">
+ 
+
+  </head>
+  <body style="background-color: rgb(226, 253, 244);"class="page-header-fixed page-on-scroll" id="intro">
+  
+    <section id="intro">
+        <h1 style="font-family: cursive;color:chocolate;font-weight: 900;">Avis sur notre service</h1>
+    <div class="avis">
+      <img src="https://adespresso.com/wp-content/uploads/2017/02/more-customer-reviews-on-social-media-1024x535.jpg?fbclid=IwAR1okM0oETk6OnbQ_VbIV0xIhz7-a5bpgVUBLkrXtsMD7csxFm_82JPxRLc" alt=""
+      style="height: 200px; width: 300px;">
+    </div>
+
+    <div class="review-form">
+      <h2 style="font-family: cursive;color:rgb(245, 155, 81);font-weight: 900;">Laisser votre avis</h2>
+        <div class="rating">
+            <input type="radio" id="star5" name="rating" value="5">
+            <label for="star5" title="5 "></label>
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4" title="4 "></label>
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3" title="3 "> </label>
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2" title="2 "> </label>
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1" title="1 "></label>
+          </div>
+
+          <br>  <br>
+      
+        <label for="review" style="font-family: cursive;color:rgb(247, 150, 81);font-size: 30px;">Note:</label><br>
+        <textarea id="review" name="review" required style="height: 100px;width: 300px;"></textarea><br>
+        <button type="button" class="btn btn-warning">Noter</button>
+    </div>
+
+
+    <br><br>
+
+
+    <div class="reviews">
+      <h2 style="font-family: cursive;color:rgb(25, 18, 112);font-weight: 900;">Avis des clients</h2>
+      <div class="review">
+
+        <p>Note: 5 </p>
+        <p>Avis </p>
+      </div>
+      <!-- Ajoutez d'autres avis ici -->
+    </div>
+
+    </section>
+  </body>
+  <p class="go2top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16"(click)="gotoTop()">
+        <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+      </svg>
+    </p>
+
+</html>

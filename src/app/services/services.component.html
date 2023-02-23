@@ -1,0 +1,220 @@
+
+<style>
+    .container{
+        background-color: coral;
+    }
+    th{
+        font-family: American Typewriter, serif;
+       font-size: 33px;
+       color: rgb(250, 162, 29);
+    }
+    b{
+        font-family: Apple Chancery, cursive;
+        font-size: 20px;
+    }
+.headers{
+    background-image:url("https://w0.peakpx.com/wallpaper/116/459/HD-wallpaper-microchip-neon-lines-black-background-chips-technology-backgrounds.jpg") ;
+    background-size:cover;
+    background-repeat: no-repeat;
+    margin-top: -5px;
+}
+
+.modal-body{
+    margin: auto; width: 250px;
+}
+</style>
+
+<html>
+    <body>
+        
+   
+    <div class ="headers">
+        <br><br><br>
+        <br><br><br>
+    </div>
+
+
+<div class="container">
+<div class="card shadow mb-5">
+<div class="col-md-15">
+<table class="table table-striped">
+<tr> <th>Services</th><th>Tickets</th> <th></th> </tr>
+<tbody>
+
+<tr>
+<td><b>Achat offre Internet</b></td>
+<td><button class="btn btn-outline-warning btn-rounded" type="button"data-toggle="modal" data-target="#ticket">Ticket</button></td>
+<td><button type="button" class="btn btn-outline-info btn-rounded" mdbRipple rippleColor="dark"data-toggle="modal" data-target="#detail">Details</button></td>
+
+</tr>
+<tr>
+    <td><b>Achat Produit</b></td>
+    <td>    <button class="btn btn-outline-warning btn-rounded" type="button"data-toggle="modal" data-target="#ticket">Ticket</button></td>
+    <td><button type="button" class="btn btn-outline-info btn-rounded" mdbRipple rippleColor="dark"data-toggle="modal" data-target="#detail">Details</button></td>
+ 
+</tr>
+
+<tr>
+<td><b>Paiement Facture</b></td>
+<td>    <button class="btn btn-outline-warning btn-rounded" type="button"data-toggle="modal" data-target="#ticket">Ticket</button></td>
+<td><button type="button" class="btn btn-outline-info btn-rounded" mdbRipple rippleColor="dark"data-toggle="modal" data-target="#detail">Details</button></td>
+
+</tr>
+
+<tr>
+    <td><b>S.A.V</b></td>
+    <td>    <button class="btn btn-outline-warning btn-rounded" type="button"data-toggle="modal" data-target="#ticket">Ticket</button></td>
+    <td><button type="button" class="btn btn-outline-info btn-rounded" mdbRipple rippleColor="dark"data-toggle="modal" data-target="#detail">Details</button></td>
+    
+    </tr>
+
+    <tr>
+        <td><b>Operation divers</b></td>
+        <td>    <button class="btn btn-outline-warning btn-rounded" type="button"data-toggle="modal" data-target="#ticket">Ticket</button></td>
+        <td><button type="button" class="btn btn-outline-info btn-rounded" mdbRipple rippleColor="dark"data-toggle="modal" data-target="#detail">Details</button></td>
+        
+        </tr>    
+
+</tbody>
+</table>
+
+
+
+<!-- detail -->
+
+<div class="modal fade" id="detail" tabindex="-1" role="dialog" aria-labelledby="ticketLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header" >
+         
+          <h5 class="modal-title" id="ticketLabel"><i  style="margin: 150px;color: crimson;font-size: 40px;">Details</i></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="row g-3">
+            <div class="col-md-10">
+              <label for="textMobile" class="form-label" ><b>Agence Complet </b> </label>
+              
+            <br><br>
+            <label for="textMobile" class="form-label" ><b>Agence Moyenne </b> </label><br><br>
+            <label for="textMobile" class="form-label" ><b> Agence Normal</b> </label><br>         
+             </div>  
+             
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- ticket -->
+
+<div class="modal fade" id="ticket" tabindex="-1" role="dialog" aria-labelledby="ticketLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header" >
+         
+          <h5 class="modal-title" id="ticketLabel"><i  style="margin: 90px;color: rgb(230, 111, 13);font-size: 40px;font-family: American Typewriter, serif;">
+            Prendre Ticket</i></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="row g-3" style="margin-left:5px;">
+            <div class="col-md-10">
+                <div class="card text-dark bg-info mb-3" style="max-width: 18rem;">
+                    <div class="card-body">
+                      <h1 class="card-title"style="margin-left: 55px;">2</h1>
+                      <p class="card-text">Entrain d'etre servi</p>
+                    </div>
+                  </div>
+            <br><br>  
+            <div class="card text-dark bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-body">
+                  <h1 class="card-title"style="margin-left: 55px;">3</h1>
+                  <p class="card-text">Dernier Numero</p>
+                </div>
+              </div>  
+        </div>  
+             
+        
+             <div class="col-6" class="text-center">
+                <br>
+                <button type="button" class="btn btn-outline-info"data-toggle="modal" data-target="#confirmer">Confirmer</button>
+              </div>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- confirmer -->
+
+<div class="modal fade" id="confirmer" tabindex="-1" role="dialog" aria-labelledby="confirmerLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" >
+       
+        <h5 class="modal-title" id="confirmerLabel"><i  style="margin: 150px;"> Nom Prenom</i></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="row g-3">
+          <div class="col-md-10">
+            <label for="textMobile" class="form-label" ><b>Actuellement en service : </b> </label>
+            
+          <br><br>
+          <label for="textMobile" class="form-label" ><b>Ticket Numero : </b> </label><br><br>
+          <label for="textMobile" class="form-label" ><h1 style="margin-right: 50px;margin-left: 50px;">A120 </h1> </label>
+          <br><br>
+          <label for="textMobile" class="form-label" >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+              <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+            </svg><b>10 </b><br>
+            
+              <label for="textMobile" class="form-label" >Les personnes en attente </label><br>
+          </label>
+            <label for=""> <b>   </b></label>
+            <label for="textMobile" class="form-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+              <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+              <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+            </svg><b>15 min</b>
+          <br>
+            <label for="textMobile" class="form-label" >Les personnes en attente </label><br>
+          </label>
+        
+          </div>         
+          <div class="col-6" class="text-center">
+            <br>
+            <button type="button" class="btn btn-warning btn-rounded" style="margin-right: 40px;">Valider</button>
+            <button type="button" class="btn btn-danger btn-rounded">Annuler</button>
+          </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+
+</body>
+</html>
+<p class="go2top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16"(click)="gotoTop()">
+      <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+    </svg>
+  </p>
