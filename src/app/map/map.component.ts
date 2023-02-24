@@ -1,21 +1,38 @@
-import { Component, OnInit } from '@angular/core';
-import * as L from 'leaflet';
-
+import { Component, AfterViewInit, ViewChild, ElementRef } from 
+'@angular/core';
 @Component({
-  selector: 'app-map',
-  template: `
-    <div id="map" style="height: 200px; width: 100%;"></div>
-  `,
-  styleUrls: ['./map.component.css']
+  selector: 'app-root',
+  templateUrl: 'map.component.html',
+  styleUrls: ['map.component.css'],
 })
-export class MapComponent implements OnInit {
+export class MapComponent implements AfterViewInit {
+  title = 'angular-gmap';
+  @ViewChild('mapContainer', { static: false })
+  gmap!: ElementRef;
+  map!: google.maps.Map;
+  lat = 36.8665;
+  lng = 10.1647;
 
-  constructor() { }
+  coordinates = new google.maps.LatLng(this.lat, this.lng);
 
-  ngOnInit(): void {const map = L.map('map').setView([51.505, -0.09], 20);
+  mapOptions: google.maps.MapOptions = {
+   center: this.coordinates,
+   zoom: 8
+  };
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© <a href="https://www.google.com/maps/place/ExpressDisplay/@36.8527466,10.1890438,16z/data=!4m12!1m6!3m5!1s0x0:0xe4d4e4f174704108!2sExpressDisplay!8m2!3d36.852635!4d10.1890438!3m4!1s0x0:0xe4d4e4f174704108!8m2!3d36.852635!4d10.1890438">OpenStreetMap</a> contributors'
-  }).addTo(map);
-}
-}
+  marker = new google.maps.Marker({
+    position: this.coordinates,
+    map: this.map,
+  });
+
+  ngAfterViewInit() {
+    this.mapInitializer();
+  }
+
+  mapInitializer() {
+    this.map = new google.maps.Map(this.gmap.nativeElement, 
+    this.mapOptions);
+    this.marker.setMap(this.map);
+  }
+ }
+

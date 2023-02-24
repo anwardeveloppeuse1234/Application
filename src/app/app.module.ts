@@ -23,7 +23,10 @@ import { HttpClientModule, HttpParams } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AddTicketComponent } from './add-ticket/add-ticket.component';
 import { LoginComponent } from './login/login.component';
+import { ClientService } from './services/client.service';
 
+import { AgmCoreModule } from '@agm/core';
+  
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,10 +54,14 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule, 
+     AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDCE_o65qi0cg_YJI4pXn5rhrKVXcMfBag',
+    
+    }) 
     
   ],
-  providers: [],
+  providers: [ClientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -19,9 +19,15 @@ export class AppComponent {
   @ViewChild('target') private myScrollContainer: ElementRef<HTMLInputElement> = {} as ElementRef;
   @ViewChild('exampleModal') closebutton : ElementRef<any> = {} as ElementRef;
   @HostListener('window:scroll')
+
+
+  
 ngOnInit(): void {
   
+
+
 }
+
 displaySideBar(){
 
   this.closebutton.nativeElement.click();
@@ -69,4 +75,5 @@ err:number = 0;
     });
    
   }
+  
 }
