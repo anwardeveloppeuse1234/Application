@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { MapsAPILoader } from '@agm/core';
+import { agenceModel } from '../model/agence.model';
+import { AgenceService } from '../services/agence.service';
 
 
 @Component({
@@ -8,13 +9,32 @@ import { MapsAPILoader } from '@agm/core';
   styleUrls: ['./agences.component.css']
 })
 export class AgencesComponent implements OnInit {
-  
-  constructor() { }
-
-  ngOnInit(): void {
+  request: agenceModel ;
+  constructor(private agenceService: AgenceService) {
+   
+    this.request= {} as agenceModel;
   }
 
+  ngOnInit(): void {
+  
+  }
 
+  save(){
+    
+    this.request.token="ctKaD7IHbxU";
+  
+    this.agenceService.afficheagence(this.request).subscribe((result: any)=>{
+      if(result){
+        if(result.id_client>0){
+          alert('nouveau compte créer')
+        }else if(result.id_client == undefined || result.id_client == null){
+          alert('compte modifié avec succès');
+        }
+  
+        alert('success');
+      }
+    })
+  }
 
 
   getLocation(): void {

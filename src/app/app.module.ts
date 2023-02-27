@@ -1,3 +1,4 @@
+import { InscritComponent } from './inscrit/inscrit.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -24,14 +25,15 @@ import { FormsModule } from '@angular/forms';
 import { AddTicketComponent } from './add-ticket/add-ticket.component';
 import { LoginComponent } from './login/login.component';
 import { ClientService } from './services/client.service';
-
-import { AgmCoreModule } from '@agm/core';
-  
+import { TicketService } from './service/ticket.service';
+import { AgenceService } from './services/agence.service';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
     IdentifierComponent,
     MapComponent,
+    InscritComponent,
     AcceuilComponent,
     ContactComponent,
     CaricatureComponent,
@@ -54,14 +56,14 @@ import { AgmCoreModule } from '@agm/core';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule, 
-     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDCE_o65qi0cg_YJI4pXn5rhrKVXcMfBag',
-    
-    }) 
-    
+    HttpClientModule,
+    BrowserAnimationsModule,
   ],
-  providers: [ClientService],
+  providers: [ClientService,
+              TicketService,
+              AgenceService
+             
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
